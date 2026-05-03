@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA BANDIERA | Pizza • Kebab • Tacos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-green: #2e7d32;
+            --brand-red: #c62828;
+            --brand-yellow: #ffc107;
+            --bg-light: #fcfcfc;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fff;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 5px solid var(--brand-green);
+        }
+
+        .logo-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            color: #222;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .call-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--brand-red);
+            padding: 15px;
+            text-align: center;
+            border-bottom: 3px solid var(--brand-yellow);
+        }
+
+        .btn-call {
+            background-color: white;
+            color: var(--brand-red);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+
+        .promo-banner {
+            background: linear-gradient(to right, var(--brand-green), var(--brand-red));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .offer-card {
+            background: white;
+            padding: 20px;
+            border-left: 5px solid var(--brand-green);
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .menu-category-title {
+            color: var(--brand-red);
+            border-bottom: 2px solid var(--brand-red);
+            display: inline-block;
+            margin-top: 35px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .menu-item-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .price-tag { color: var(--brand-green); font-weight: bold; font-size: 1.1rem; }
+
+        .info-section { 
+            text-align: center; 
+            padding: 50px 20px; 
+            background: #fff; 
+            margin-top: 40px; 
+            border-top: 1px solid #eee; 
+        }
+
+        footer { background: #1a1a1a; color: white; padding: 30px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<header>
+    <p style="color: var(--brand-green); font-weight: bold; margin: 0;">PIZZA • KEBAB • TACOS</p>
+    <h1 class="logo-text">LA BANDIERA</h1>
+    <p style="font-weight: 500; color: #666;">Cologno al Serio - Via Circonvallazione</p>
+</header>
+
+<div class="call-bar">
+    <a href="tel:3382666499" class="btn-call">📞 ORDINA ORA: 338 266 6499</a>
+</div>
+
+<div class="container">
+    
+    <div class="promo-banner">
+        <h2 style="margin:0;">🔥 TUTTI I MARTEDÌ FERIALI</h2>
+        <p style="font-size: 1.2rem; margin: 5px 0 0 0;">Tutte le pizze a soli <strong>€ 6,00</strong> (con ritiro)</p>
+    </div>
+
+    <!-- TACOS SECTION -->
+    <section>
+        <h3 class="menu-category-title">French Tacos (Menù con Bibita e Patatine)</h3>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <strong>DYBALA</strong>
+                <small>Mozzarella, wurstel, patatine fritte, cheddar, salse</small><br>
+                <span class="price-tag">Menù € 10,00</span>
+            </div>
+            <div class="offer-card">
+                <strong>NEYMAR</strong>
+                <small>Mozzarella, prosciutto, salame, wurstel, salsiccia, salse</small><br>
+                <span class="price-tag">Menù € 10,00</span>
+            </div>
+            <div class="offer-card">
+                <strong>MBAPPÉ</strong>
+                <small>Mozzarella, patatine fritte, cotoletta di pollo, salse</small><br>
+                <span class="price-tag">Menù € 10,00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEBAB & CALZONI -->
+    <section>
+        <h3 class="menu-category-title">Kebab & Specialità</h3>
+        <div class="menu-item-row"><span>Panino Kebab</span> <span class="price-tag">€ 6,00</span></div>
+        <div class="menu-item-row"><span>Piadina Kebab</span> <span class="price-tag">€ 7,00</span></div>
+        <div class="menu-item-row"><span>Piatto Kebab <small>(Solo Carne + 2 Panini)</small></span> <span class="price-tag">€ 11,00</span></div>
+    </section>
+
+    <section class="info-section">
+        <h2 style="font-family: 'Oswald'; color: var(--brand-green);">CONTATTI & CONSEGNA</h2>
+        <p>📍 <strong>Indirizzo:</strong> Via Circonvallazione, 56/D, 24055 Cologno al Serio BG</p>
+        <p>🚗 <strong>Consegna a DOMICILIO disponibile</strong></p>
+        <p>📞 338 266 6499 | 📱 338 266 6770</p>
+        <p><strong>Orari:</strong> 11:00 - 14:30 / 17:30 - 22:30</p>
+    </section>
+</div>
+
+<footer>
+    <p>© 2026 LA BANDIERA | Realizzato da [Tuo Nome]</p>
+</footer>
+
+</body>
+</html>
